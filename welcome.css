@@ -1,54 +1,65 @@
+/* General styling for all devices */
 header {
     text-align: center;
     font-size: 45px;
     background-color: bisque;
+    padding: 10px 0;
 }
-#fathone {
-    position: absolute;
-    left: 670px;
-    background-color: orange;
-    text-align: center;
 
-    width: 200px;
-    border: orange 2px solid;
-    border-radius: 20px;
-    font-size: 40px;
-}
-#fathtwo {
-    position: absolute;
-    left: 670px;
-    top: 230px;
-    background-color: orange;
-    text-align: center;
-    width: 200px;
-    border: orange 2px solid;
-    border-radius: 20px;
-    font-size: 15px;
-}
-#faththree {
-    position: absolute;
-    left: 670px;
-    top: 340px;
-    background-color: orange;
-    text-align: center;
-    width: 200px;
-    border: orange 2px solid;
-    border-radius: 20px;
-    font-size: 15px;
-}
+#fathone,
+#fathtwo,
+#faththree,
 #fathfour {
-    position: absolute;
-    left: 670px;
-    top: 440px;
     background-color: orange;
     text-align: center;
-    width: 200px;
+    width: 80%; /* Adjust width for responsiveness */
+    margin: 10px auto; /* Center align and add spacing */
     border: orange 2px solid;
     border-radius: 20px;
-    font-size: 15px;
+    font-size: 20px; /* Adjust default font size for better readability */
+    padding: 10px;
 }
+
 a {
     text-decoration: none;
-    font-size: 40px;
+    font-size: 20px;
     color: white;
+    display: block; /* Ensure links are block-level elements */
+    padding: 10px 0;
+}
+
+/* Media query for devices smaller than 600px */
+@media (max-width: 600px) {
+    header {
+        font-size: 30px; /* Smaller font size for smaller screens */
+    }
+
+    #fathone,
+    #fathtwo,
+    #faththree,
+    #fathfour {
+        font-size: 18px; /* Reduce font size */
+    }
+
+    a {
+        font-size: 18px; /* Adjust link font size */
+    }
+}
+
+/* Media query for devices larger than 600px but smaller than 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+    header {
+        font-size: 35px; /* Moderate font size for tablets */
+    }
+
+    #fathone,
+    #fathtwo,
+    #faththree,
+    #fathfour {
+        font-size: 20px; /* Adjust font size for tablets */
+    }
+
+    a {
+        font-size: 20px;
+    }
 }
